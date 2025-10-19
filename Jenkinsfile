@@ -88,7 +88,9 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
-            deleteDir()
+        }
+        cleanup {
+            cleanWs() // Deletes the workspace
         }
         success {
             echo 'I will say Build-Hello on Success'
