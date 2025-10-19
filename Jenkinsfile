@@ -1,9 +1,9 @@
 pipeline {
     agent { label 'AGENT-1' }
     environment { 
-        Project = 'Expense'
-        Component = 'Frontend'
-        Env = 'Dev'
+        PROJECT = 'Expense'
+        COMPONENT = 'Frontend'
+        ENV = 'Dev'
         }
 
     stages {
