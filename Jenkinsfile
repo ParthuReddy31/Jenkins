@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     echo "Hello this is my first Jenkins pipeline Stage Build"
-                    echo "Project Name is ${Project}-${stage}"
+                    echo "Project Name is ${PROJECT}"
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
                 script{
                     sh """ 
                     echo "Hello this is my first Jenkins pipeline Stage Test"
-                    echo "Component Name is ${Component}-${stage}"
+                    echo "Component Name is ${COMPONENT}"
                     """
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script{
                     echo 'Hello this is my first Jenkins pipeline Stage Deploy'
-                    echo "Environment Name is ${Env}-${stage}"
+                    echo "Environment Name is ${ENV}"
                 }
             }
         }
