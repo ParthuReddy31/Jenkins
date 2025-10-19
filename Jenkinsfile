@@ -14,7 +14,6 @@ pipeline {
                     sh """ 
                     echo "Hello this is my first Jenkins pipeline Stage Test"
                     """
-                    sfsd
                 }
             }
         }
