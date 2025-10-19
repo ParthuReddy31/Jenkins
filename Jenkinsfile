@@ -30,6 +30,26 @@ pipeline {
                 }
             }
         }
+        stage('Parallel Stages') {
+            parallel {
+                stage('Stage-1') {
+                    steps {
+                        script {
+                            echo "Hello this is Stage 1 inside Parallel Stage"
+                            sleep 10
+                        }
+                    }
+                }
+                stage('Stage-2') {
+                    steps {
+                        script {
+                            echo "Hello this is Stage 2 inside Parallel Stage"
+                            sleep 10
+                        }
+                    }
+                }
+            }
+        }
         stage("test"){
             steps {
                 script{
