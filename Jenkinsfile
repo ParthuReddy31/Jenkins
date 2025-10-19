@@ -89,10 +89,10 @@ pipeline {
         always { 
             echo 'I will always say There we go.. Hello again!'
         }
-        deleteDir() // Deletes the workspace
-        // cleanup {
-        //     cleanWs() // Deletes the workspace
-        // }
+        //deleteDir() // Deletes the workspace
+        cleanup {
+            cleanWs() // Deletes the workspace
+        }
         success {
             echo 'I will say Build-Hello on Success'
         }
