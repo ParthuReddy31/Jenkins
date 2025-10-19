@@ -10,15 +10,15 @@ pipeline {
         timeout(time: 25, unit: 'MINUTES')
         } 
     parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        string(name: 'PERSON', defaultValue: 'Parthu', description: 'Who should I say hello to?')
 
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'I am learning to Run Jenkins Pipeline as Code')
 
         booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
 
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Parthu1234')
     }
 
     stages {
@@ -27,7 +27,6 @@ pipeline {
                 script {
                     echo "Hello this is my first Jenkins pipeline Stage Build"
                     echo "Project Name is ${PROJECT}"
-                    sleep 30
                 }
             }
         }
