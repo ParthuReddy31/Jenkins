@@ -88,6 +88,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
+            deleteDir()
         }
         success {
             echo 'I will say Build-Hello on Success'
