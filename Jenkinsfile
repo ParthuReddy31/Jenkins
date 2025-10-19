@@ -2,7 +2,7 @@ pipeline {
     agent { label 'AGENT-1' }
     environment { 
         PROJECT = 'Expense'
-        COMPONENT = 'Frontend'
+        COMPONENT = 'Backend'
         ENV = 'Dev'
         }
     options { 
