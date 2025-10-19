@@ -89,9 +89,9 @@ pipeline {
         always { 
             echo 'I will always say Hello again!'
         }
-        cleanup {
-            cleanWs() // Deletes the workspace
-        }
+        // cleanup {
+        //     cleanWs() // Deletes the workspace
+        // }
         success {
             echo 'I will say Build-Hello on Success'
         }
