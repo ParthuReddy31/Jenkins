@@ -5,6 +5,9 @@ pipeline {
         COMPONENT = 'Frontend'
         ENV = 'Dev'
         }
+    options { 
+        disableConcurrentBuilds() 
+        } 
 
     stages {
         stage('Build'){
@@ -12,6 +15,7 @@ pipeline {
                 script {
                     echo "Hello this is my first Jenkins pipeline Stage Build"
                     echo "Project Name is ${PROJECT}"
+                    sleep 30
                 }
             }
         }
