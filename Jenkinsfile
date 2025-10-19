@@ -3,7 +3,7 @@ pipeline {
     environment { 
         PROJECT = 'Expense'
         COMPONENT = 'Backend'
-        ENV = 'Dev'
+        ENV = 'prod'
         }
     options { 
         disableConcurrentBuilds() 
