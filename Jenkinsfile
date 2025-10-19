@@ -87,7 +87,7 @@ pipeline {
     }
     post { 
         always { 
-            echo 'I will always say Hello again!'
+            echo 'I will always say There we go.. Hello again!'
         }
         //deleteDir() // Deletes the workspace
         // cleanup {
