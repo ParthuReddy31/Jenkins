@@ -1,10 +1,17 @@
 pipeline {
     agent { label 'AGENT-1' }
+    environment { 
+        Project = 'Expense'
+        Component = 'Frontend'
+        Env = 'Dev'
+        }
+
     stages {
         stage('Build'){
             steps {
                 script {
                     echo "Hello this is my first Jenkins pipeline Stage Build"
+                    echo "Project Name is ${Project}-${stage}"
                 }
             }
         }
@@ -13,6 +20,7 @@ pipeline {
                 script{
                     sh """ 
                     echo "Hello this is my first Jenkins pipeline Stage Test"
+                    echo "Component Name is ${Component}-${stage}"
                     """
                 }
             }
@@ -21,6 +29,7 @@ pipeline {
             steps {
                 script{
                     echo 'Hello this is my first Jenkins pipeline Stage Deploy'
+                    echo "Environment Name is ${Env}-${stage}"
                 }
             }
         }
