@@ -50,7 +50,7 @@ pipeline {
             //     }
             // }
             when {
-                branch 'main'
+                environment name: 'ENV', value: 'prod'
             }
             steps {
                 script{
